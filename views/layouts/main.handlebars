@@ -5,8 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tech Blog</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
 <body>
-    {{{body}}}
+    <div class="wrapper">
+        <header>
+            <h1>
+                <a href="/">Tech Blog</a>
+            </h1>
+            <nav>
+                <a href="/dashboard">dashboard</a>
+                <button id="logout" class="btn">logout</button>
+                <a href="/login">login</a>
+            </nav>
+        </header>
+        <main>
+            {{{body}}}
+        </main>
+    </div>
 </body>
 </html>

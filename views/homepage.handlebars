@@ -1,1 +1,7 @@
-<h1>You are on the home page</h1>
+<ol class="blog-list">
+    {{#each blogs as |blog|}}
+    <li>
+        {{> blog-info blog}}
+    </li>
+    {{/each}}
+</ol>
