@@ -15,14 +15,19 @@
             </h1>
             <nav>
                 <a href="/dashboard">dashboard</a>
+                {{#if loggedIn}}
                 <button id="logout" class="btn">logout</button>
+                {{else}}
                 <a href="/login">login</a>
+                {{/if}}
             </nav>
         </header>
         <main>
             {{{body}}}
         </main>
     </div>
+    {{#if loggedIn}}
     <script src="/javascript/logout.js"></script>
+    {{/if}}
 </body>
 </html>

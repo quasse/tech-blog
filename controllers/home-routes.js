@@ -44,7 +44,7 @@ router.get("/blogs/:id", (req, res) => {
     include: [
       {
         model: Comment,
-        attributes: ["comment_text", "blog_id", "user_id", "created_at"],
+        attributes: ["id", "comment_text", "blog_id", "user_id", "created_at"],
         inculde: {
           model: User,
           attributes: ["username"],
