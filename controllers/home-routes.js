@@ -25,7 +25,7 @@ router.get("/", (req, res) => {
 
       res.render("homepage", {
         blogs,
-        // will later include logged in when adding sessions
+        loggedIn: req.session.loggedIn,
       });
     })
     .catch((err) => {
@@ -65,7 +65,7 @@ router.get("/blogs/:id", (req, res) => {
 
       res.render("single-blog", {
         blog,
-        //will include logged in when building session
+        loggedIn: req.session.loggedIn,
       });
     })
     .catch((err) => {
@@ -75,6 +75,11 @@ router.get("/blogs/:id", (req, res) => {
 });
 
 router.get("/login", (req, res) => {
+  if (req.session.loggedIn) {
+    res.redirect("/");
+    return;
+  }
+
   res.render("login");
 });
 
