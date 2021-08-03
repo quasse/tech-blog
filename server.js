@@ -3,6 +3,7 @@ const routes = require("./controllers");
 const exphbs = require("express-handlebars");
 const path = require("path");
 const session = require("express-session");
+const helpers = require("./utils/helpers");
 
 require("dotenv").config();
 
@@ -24,7 +25,7 @@ const sess = {
 
 app.use(session(sess));
 
-const hbs = exphbs.create({});
+const hbs = exphbs.create({ helpers });
 
 app.engine("handlebars", hbs.engine);
 app.set("view engine", "handlebars");
