@@ -21,6 +21,7 @@
         {{#each blogs as |blog|}}
         <li>
             {{> blog-info blog}}
+            <a href="/dashboard/edit/{{blog.id}}" class="edit-link">Edit blog</a>
         </li>
         {{/each}}
     </ol>
