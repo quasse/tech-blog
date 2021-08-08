@@ -73,3 +73,37 @@ main {
 .blog .title p {
   color: white;
 }
+
+.new-blog-form {
+  width: 300px;
+  height: 200px;
+}
+
+.new-blog-form div {
+  display: flex;
+  flex-direction: column;
+}
+
+.new-blog-form textarea {
+  height: 100px;
+}
+
+textarea,
+input {
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+.edit-blog-form {
+  width: 300px;
+}
+
+.edit-blog-form div {
+  display: flex;
+  flex-direction: column;
+}
+
+.comment {
+  border: 1px solid black;
+  margin-bottom: 2px;
+}
